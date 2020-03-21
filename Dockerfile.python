@@ -51,12 +51,11 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m pip install python-telegram-bot 
-# numpy matplotlib
 
 USER root
 
 ADD bot.py Listener.py callbacks.py config.py /home/jovyan/
 
-USER $NB_UID
+USER ${NB_UID}
 
 WORKDIR /home/jovyan
