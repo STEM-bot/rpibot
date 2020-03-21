@@ -4,6 +4,7 @@ timer_value = 600.0 #seconds
 
 kernel = ''
 kernels = ('python', 'octave')
+kernel_names = {'python':'python3', 'octave':'octave'}
 
 import logging
 
