@@ -52,7 +52,7 @@ RUN apt-get update \
 
 RUN python3 -m pip install python-telegram-bot 
 
-RUN python -m pip install octave_kernel
+RUN python3 -m pip install octave_kernel
     
 USER root
 
