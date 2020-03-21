@@ -27,7 +27,7 @@ def start_cb(update, context):
 
             rwd = wd
 
-            km = jupyter_client.KernelManager(kernel_name = config.kernel)
+            km = jupyter_client.KernelManager(kernel_name = config.kernel_name)
             km.start_kernel(cwd=rwd)
             cl = km.blocking_client()
             _init_commands(cl, rwd, kernel)

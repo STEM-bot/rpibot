@@ -55,10 +55,10 @@ RUN python3 -m pip install python-telegram-bot
 
 USER root
 
+RUN mkdir /home/jovyan/work && chown jovyan.jovyan /home/jovyan/work
+
 ADD bot.py Listener.py callbacks.py config.py /home/jovyan/
 
 USER $NB_UID
 
 WORKDIR /home/jovyan
-
-RUN mkdir /home/jovyan/work

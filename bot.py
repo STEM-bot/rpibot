@@ -17,7 +17,8 @@ if __name__ == '__main__':
 		if kernel not in config.kernels:
 			print('Kernel %s not found; available kernels: %s' %(kernel, config.kernels))
 			sys.exit(0)
-		config.kernel = config.kernel_names[kernel]
+		config.kernel = kernel
+                config.kernel_name = config.kernel_names[kernel]
 
 	updater = Updater(token, use_context=True, user_sig_handler=signal_handler)
 

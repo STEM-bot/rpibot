@@ -3,6 +3,7 @@ kernel_dict = {}
 timer_value = 600.0 #seconds
 
 kernel = ''
+kernel_name = ''
 kernels = ('python', 'octave')
 kernel_names = {'python':'python3', 'octave':'octave'}
 
