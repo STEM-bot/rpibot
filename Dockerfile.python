@@ -57,6 +57,8 @@ USER root
 
 ADD bot.py Listener.py callbacks.py config.py /home/jovyan/
 
+USER $NB_UID
+
 WORKDIR /home/jovyan
 
-USER $NB_UID
+RUN mkdir /home/jovyan/work
