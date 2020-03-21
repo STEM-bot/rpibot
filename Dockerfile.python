@@ -39,11 +39,13 @@ CMD ["jupyter", "lab", "--no-browser", "--ip=0.0.0.0", "--NotebookApp.token=''"]
 
 RUN apt-get update \
  && apt-get install -yq --no-install-recommends \
-    libffi-dev libssl-dev \
+     python3-numpy python3-matplotlib \
+#    libffi-dev libssl-dev \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install python-telegram-bot numpy matplotlib
+RUN python3 -m pip install python-telegram-bot 
+# numpy matplotlib
 
 USER root
 
