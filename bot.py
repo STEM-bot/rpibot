@@ -20,8 +20,6 @@ if __name__ == '__main__':
 		config.kernel = kernel
 		config.kernel_name = config.kernel_names[kernel]
 
-	os.makedirs('/home/jovyan/work', exist_ok=True)
-        
 	updater = Updater(token, use_context=True, user_sig_handler=signal_handler)
 
 	dp = updater.dispatcher
